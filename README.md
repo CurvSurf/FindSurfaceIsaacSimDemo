@@ -182,7 +182,16 @@ See the installation guide for prerequisites and platform verification status.
 
 ## Licensing and distribution
 
-The native FindSurface SDK and NVIDIA Isaac Sim/Kit are obtained separately.
+The CurvSurf-owned application code and documentation are available under the
+[MIT License](LICENSE).
+
+**The native FindSurface SDK binaries, including `FindSurface.dll` and
+`libFindSurface.so`, are not covered by this MIT license.** They are obtained
+separately and remain subject to CurvSurf's SDK terms and any applicable
+commercial agreement, including when downloaded by the launch scripts.
+
+The FindSurfaceOmniverseExtension submodule, NVIDIA Isaac Sim/Kit and other
+third-party components retain their own applicable terms.
 Preserve the bootstrap extension's
 [third-party notices](source/extensions/com.findsurface.bootstrap/THIRD_PARTY_NOTICES.md)
 and the application's [third-party notices](THIRD_PARTY_NOTICES.md).
