@@ -1,0 +1,3 @@
+[submodule "source/extensions/com.findsurface.bootstrap"]
+	path = source/extensions/com.findsurface.bootstrap
+	url = https://github.com/CurvSurf/FindSurfaceOmniverseExtension.git

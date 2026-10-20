@@ -1,0 +1,220 @@
+{
+  "captures": {
+    "d455-16x9-50k": {
+      "attempts": [
+        {
+          "repeat": 1,
+          "success": true,
+          "match_rms": 0.014459629683799657
+        },
+        {
+          "repeat": 2,
+          "success": true,
+          "match_rms": 0.015192924896883321
+        },
+        {
+          "repeat": 3,
+          "success": true,
+          "match_rms": 0.01429138581178071
+        },
+        {
+          "repeat": 4,
+          "success": false,
+          "error": "FindSurface did not return a valid result. result_type=-513, rms_error=50500"
+        },
+        {
+          "repeat": 5,
+          "success": true,
+          "match_rms": 0.014045162239094239
+        },
+        {
+          "repeat": 6,
+          "success": false,
+          "error": "FindSurface did not return a valid result. result_type=-513, rms_error=50500"
+        }
+      ],
+      "selected_frame": {
+        "generation": 2,
+        "sequence": 3
+      },
+      "inliers": 1483,
+      "fit_rms": 0.025571618229150772,
+      "match_rms": 0.01429138581178071,
+      "sensor_pose": {
+        "position_m": [
+          0,
+          0,
+          8
+        ],
+        "orientation_xyzw": [
+          0,
+          2.7183456743017934e-16,
+          3.330669073875469e-16,
+          1
+        ]
+      },
+      "scan_rig": {
+        "position_m": [
+          0,
+          0,
+          8
+        ],
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "display_pose": {
+        "position_m": [
+          -3.24,
+          -1.84,
+          4.3
+        ],
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "display_intrinsics": {
+        "vertical_fov_degrees": 59.19481229801747,
+        "aspect_ratio": 1.7769231287837481,
+        "near_m": 0.05,
+        "far_m": 100,
+        "orthographic_height_m": null
+      },
+      "scale_mode": "sigma",
+      "sigma_multiplier": 3,
+      "color_scale_m": 0.040871808308875116,
+      "side_mean": 0.004316488559428195,
+      "side_std": 0.01362393610295837,
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "width": 1188,
+        "height": 828
+      }
+    },
+    "os0-rev7-128ch-10hz-512": {
+      "attempts": [
+        {
+          "repeat": 1,
+          "success": true,
+          "match_rms": 0.0031370527779293078
+        },
+        {
+          "repeat": 2,
+          "success": true,
+          "match_rms": 0.0015360101669674101
+        },
+        {
+          "repeat": 3,
+          "success": true,
+          "match_rms": 0.001479878239137924
+        },
+        {
+          "repeat": 4,
+          "success": true,
+          "match_rms": 0.002724581881715519
+        },
+        {
+          "repeat": 5,
+          "success": true,
+          "match_rms": 0.0032551574265840895
+        },
+        {
+          "repeat": 6,
+          "success": true,
+          "match_rms": 0.003029556432905265
+        }
+      ],
+      "selected_frame": {
+        "generation": 3,
+        "sequence": 4
+      },
+      "inliers": 731,
+      "fit_rms": 0.026866748929023743,
+      "match_rms": 0.002724581881715519,
+      "sensor_pose": {
+        "position_m": [
+          -8.042455590384634e-18,
+          0.03622000000000001,
+          8
+        ],
+        "orientation_xyzw": [
+          -0.5000000000000001,
+          0.5000000000000001,
+          0.5000000000000001,
+          0.4999999999999999
+        ]
+      },
+      "scan_rig": {
+        "position_m": [
+          0,
+          0,
+          8
+        ],
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "display_pose": {
+        "position_m": [
+          -3.24,
+          -1.84,
+          4.3
+        ],
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "display_intrinsics": {
+        "vertical_fov_degrees": 59.19481229801747,
+        "aspect_ratio": 1.7769231287837481,
+        "near_m": 0.05,
+        "far_m": 100,
+        "orthographic_height_m": null
+      },
+      "scale_mode": "sigma",
+      "sigma_multiplier": 3,
+      "color_scale_m": 0.00799296434866614,
+      "side_mean": 0.0005698575643190144,
+      "side_std": 0.0026643214495553798,
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "width": 1188,
+        "height": 828
+      }
+    }
+  },
+  "description": "Fresh README image captures after disabling D455 asset physics before warmup and verifying its optical mount. Lower middle successful detection by Match RMS among six attempts; packaged condition A, Distance sigma=max(0,0.005*range+0.01), per-result Surface Side Sigma multiplier 3.",
+  "capture_method": "Native Kit renderer swapchain PNG. Identical camera projection and pixel crops; no image resizing or sharpening.",
+  "source_frame_size_px": [
+    2532,
+    1383
+  ],
+  "crops_px": {
+    "surface-side": {
+      "x": 370,
+      "y": 145,
+      "width": 1120,
+      "height": 1120
+    },
+    "histograms": {
+      "x": 1812,
+      "y": 882,
+      "width": 680,
+      "height": 410
+    }
+  }
+}

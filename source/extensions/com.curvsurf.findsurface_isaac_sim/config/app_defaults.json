@@ -1,0 +1,35 @@
+{
+  "schema_version": 3,
+  "objects": {
+    "plane": {"enabled":true,"height_m":2.8799999356269836,"orientation_xyzw":[-0.23167173145756478,-0.1838132326213639,0.041640930695354204,0.9543620577367707],"position_m":[-3.7899999152868986,1.4899999666959047,0.7],"subdivision":14,"display_subdivision":4,"face_color_rgba":[0.36,0.72,0.94,0.25],"wire_color_rgba":[0.1,0.43,0.62,1.0],"width_m":2.7599999383091927},
+    "sphere": {"enabled":true,"orientation_xyzw":[-0.7071067811865476,0,0,0.7071067811865475],"position_m":[-3.2399999275803566,-1.839999958872795,0.55],"radius_m":1.6,"subdivision":96,"display_subdivision":32,"face_color_rgba":[0.36,0.72,0.94,0.25],"wire_color_rgba":[0.1,0.43,0.62,1.0]},
+    "cylinder": {"enabled":true,"length_m":2.8099999371916056,"orientation_xyzw":[-0.6488339541859462,0.2810951794240332,-0.28109517942403317,0.6488339541859462],"position_m":[-0.14999999664723873,2.009999955072999,0.029999999329447746],"radius_m":1.6,"subdivision":96,"display_subdivision":32,"face_color_rgba":[0.36,0.72,0.94,0.25],"wire_color_rgba":[0.1,0.43,0.62,1.0]},
+    "cone": {"bottom_radius_m":1.889999957755208,"enabled":true,"length_m":2.5999999418854713,"orientation_xyzw":[-0.7071067811865476,0,0,0.7071067811865475],"position_m":[0.17999999597668648,-1.6099999640136957,0.6],"subdivision":96,"display_subdivision":32,"face_color_rgba":[0.36,0.72,0.94,0.25],"wire_color_rgba":[0.1,0.43,0.62,1.0],"top_radius_m":0.6999999843537807},
+    "torus": {"enabled":true,"major_radius_m":1.1899999734014273,"minor_radius_m":0.7999999821186066,"orientation_xyzw":[0.005829417846086325,-0.1606955348680704,-0.000926336801008442,0.986986375215571],"position_m":[3.3599999248981476,-0.6899999845772982,0.65],"subdivision":96,"display_subdivision":32,"face_color_rgba":[0.36,0.72,0.94,0.25],"wire_color_rgba":[0.1,0.43,0.62,1.0],"sweep_angle_deg":360,"sweep_start_deg":0}
+  },
+  "sensor": {"source":"DepthSensor","profile":"d455-16x9-30k","enabled":true,"follows_camera":true,"disparity_noise_enabled":true,"disparity_noise_mean_px":0.25,"disparity_noise_sigma_px":0.25,"outlier_removal_enabled":true,"axial_error_enabled":true,"axial_error_sigma_m":0.03,"axial_error_model":"distance","axial_error_slope_m_per_m":0.0050,"axial_error_intercept_m":0.0100,"target_material":{"attribute":"emissive","base":"concrete","coating":"paint"}},
+  "cameras": {
+    "scanner": {"projection":"perspective","position_m":[0,0,8],"orientation_xyzw":[0,0,0,1],"target_world_m":[0,0,0.45817256707988374],"vertical_fov_degrees":59.19481229801747,"near_m":0.05,"far_m":100,"orthographic_height_m":10,"manual_fov":false},
+    "scene": {"projection":"orthographic","position_m":[0.011433195644566574,0.01143319564456835,11.10083103160094],"orientation_xyzw":[0,0,0,1],"target_world_m":[0.011433195644566574,0.01143319564456835,0.5864331956445685],"vertical_fov_degrees":52,"near_m":0.05,"far_m":100,"orthographic_height_m":10,"manual_fov":true}
+  },
+  "renderer": {"scene_view":"OpenGL","scanner_view":"OpenGL","point_depth_offset_m":0.006},
+  "display": {"ruler_main_opacity":0.8,"ruler_pip_opacity":0.35,"point_size":2.0499999541789293,"minimum_geometry_length_m":0.01,"inlier_size":4.229999905452132,"outlier_color_rgba":[0.7,0.78,0.88,1.0],"inlier_negative_rgba":[0.0,0.22,1.0,1.0],"inlier_zero_rgba":[1.0,1.0,0.0,1.0],"inlier_positive_rgba":[1.0,0.02,0.0,1.0],"detected_preview_subdivision":96,"detected_preview_face_rgba":[0.72,0.96,0.92,0.25],"detected_preview_wire_rgba":[0.15,1.0,0.65,1.0],"detected_mesh_appearances":{"plane":{"subdivision":4,"face_rgba":[0.72,0.96,0.92,0.25],"wire_rgba":[0.15,1.0,0.65,1.0]},"sphere":{"subdivision":32,"face_rgba":[0.72,0.96,0.92,0.25],"wire_rgba":[0.15,1.0,0.65,1.0]},"cylinder":{"subdivision":32,"face_rgba":[0.72,0.96,0.92,0.25],"wire_rgba":[0.15,1.0,0.65,1.0]},"cone":{"subdivision":32,"face_rgba":[0.72,0.96,0.92,0.25],"wire_rgba":[0.15,1.0,0.65,1.0]},"torus":{"subdivision":32,"face_rgba":[0.72,0.96,0.92,0.25],"wire_rgba":[0.15,1.0,0.65,1.0]}},"captured_mesh_appearances":{"plane":{"subdivision":4,"face_rgba":[1.0,0.72,0.18,0.22],"wire_rgba":[1.0,0.78,0.16,1.0]},"sphere":{"subdivision":32,"face_rgba":[1.0,0.72,0.18,0.22],"wire_rgba":[1.0,0.78,0.16,1.0]},"cylinder":{"subdivision":32,"face_rgba":[1.0,0.72,0.18,0.22],"wire_rgba":[1.0,0.78,0.16,1.0]},"cone":{"subdivision":32,"face_rgba":[1.0,0.72,0.18,0.22],"wire_rgba":[1.0,0.78,0.16,1.0]},"torus":{"subdivision":32,"face_rgba":[1.0,0.72,0.18,0.22],"wire_rgba":[1.0,0.78,0.16,1.0]}}},
+  "picking": {"probe_radius_px":10,"pick_nearest_on_probe_miss":true},
+  "preview": {"sticky_auto_preview":true,"sticky_auto_preview_timeout_ms":500,"detection_average_window":10},
+  "heatmap": {"surface_side_scale_mode":"sigma","surface_side_fixed_scale_m":0.01,"surface_side_sigma_multiplier":3},
+  "detection": {
+    "type": "Auto",
+    "measurement_accuracy_m": 0.0505,
+    "mean_distance_m": 0.1,
+    "seed_radius_m": 1.025,
+    "radial_expansion": 5,
+    "lateral_extension": 5,
+    "smart_convert_cone_to_cylinder": true,
+    "smart_convert_torus_to_sphere": true,
+    "smart_convert_torus_to_cylinder": true,
+    "auto_preview": true
+  },
+  "visibility": {"source":true,"detected":true,"captured":true,"points":true},
+  "theme": "classic-dark",
+  "findsurface_ui": {"ranges":[[0.001,0.1],[0.01,0.2],[0.05,2.0]]}
+}

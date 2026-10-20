@@ -1,0 +1,31 @@
+[package]
+title = "FindSurface Isaac Sim"
+version = "0.1.0"
+description = "Recover and compare geometric surfaces from simulated depth point clouds."
+category = "Simulation"
+keywords = ["findsurface", "isaac-sim", "diagnostics"]
+
+[dependencies]
+"omni.ui" = {}
+"omni.appwindow" = {}
+"omni.kit.pip_archive" = {} # provides NumPy for immutable ScanFrame/domain imports
+"omni.kit.widget.opengl" = {}
+"omni.kit.pipapi" = {}
+"omni.kit.widget.viewport" = { optional = true }
+"omni.usd" = {}
+"omni.timeline" = { optional = true }
+"isaacsim.sensors.experimental.rtx" = { optional = true }
+"com.findsurface.bootstrap" = {}
+
+[[python.module]]
+name = "findsurface_isaac_sim.extension"
+
+[python.pipapi]
+requirements = ["PyOpenGL==3.1.10"]
+modules = ["OpenGL"]
+use_online_index = true
+
+[settings]
+exts."com.curvsurf.findsurface_isaac_sim".userPreferencesEnabled = true
+exts."com.curvsurf.findsurface_isaac_sim".appDefaultsPath = ""
+exts."com.curvsurf.findsurface_isaac_sim".findSurfaceLibraryPath = ""

@@ -1,0 +1,26 @@
+# Host and Kit generated output
+.artifacts/
+_build/
+_compiler/
+_repo/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pointcloud-*.xyz
+/*_SetupAndRun.bat
+/*_DependenciesOnly.bat
+
+# Local runtime and editor configuration
+.env
+.venv/
+.installation/
+.vscode/
+.idea/
+
+# Kit/Isaac Sim caches and logs
+cache/
+logs/
+data/Kit/
+extscache/
+extsUser/
+shadercache/

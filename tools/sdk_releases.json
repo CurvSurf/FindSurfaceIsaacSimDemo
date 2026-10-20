@@ -1,0 +1,19 @@
+{
+  "repository": "CurvSurf/FindSurfaceOmniverseExtension",
+  "releases": [
+    {
+      "tag": "v1.0.0",
+      "assets": {
+        "windows-x86_64": {"name": "FindSurface.dll", "sha256": "559ad2f68323790f10ba71c2416df1f3b115fed2b683482f25b0244a554cf230"},
+        "linux-x86_64": {"name": "libFindSurface.so", "sha256": "cc07534b136d63d7f5b7aba8a25a254c9f2bc2dfad5c25ac515ac02a9d820123"}
+      }
+    },
+    {
+      "tag": "v1.0.1",
+      "assets": {
+        "windows-x86_64": {"name": "FindSurface.dll", "sha256": "8d380af517766ad33fae42404cfa81fc087b35ee9dfcfc3a67ab8cb02b9558ed"},
+        "linux-x86_64": {"name": "libFindSurface.so", "sha256": "35a1ce7960d07434d6865ed3d1450bd9989e90c2e215eafbbd3aa13eb6f9638d"}
+      }
+    }
+  ]
+}

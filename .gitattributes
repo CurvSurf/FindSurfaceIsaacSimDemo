@@ -1,0 +1,5 @@
+* text=auto
+.gitattributes text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+docs/images/manual-icons/**/*.svg text eol=lf

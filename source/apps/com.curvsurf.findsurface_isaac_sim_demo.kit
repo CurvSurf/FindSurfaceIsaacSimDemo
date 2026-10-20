@@ -1,0 +1,43 @@
+[package]
+title = "FindSurface Isaac Sim Demo"
+version = "0.1.0"
+description = "FindSurface validation application for Isaac Sim 6.0.1."
+keywords = ["app", "findsurface", "isaac-sim", "point-cloud"]
+
+[settings]
+app.name = "FindSurfaceIsaacSimDemo"
+app.version = "0.1.0"
+app.window.title = "FindSurface Isaac Sim Demo"
+app.window.width = 1688
+app.window.height = 922
+app.fastShutdown = true
+app.settings.fabricDefaultStageFrameHistoryCount = 3
+app.gatherRenderResults = true
+app.asyncRendering = false
+app.asyncRenderingLowLatency = false
+app.useFabricSceneDelegate = true
+app.renderer.skipWhileMinimized = false
+app.vulkan = true
+persistent.omni.replicator.captureOnPlay = true
+omni.replicator.asyncRendering = false
+omni.kit.plugin.syncUsdLoads = true
+rtx.hydra.supportMultiTickRate = true
+rtx.rendering.perSensorTickTlas = true
+rtx.ecoMode.enabled = false
+rtx-transient.stableIds.enabled = true
+renderer.raytracingMotion.enabled = true
+renderer.raytracingMotion.enableHydraEngineMasking = true
+renderer.raytracingMotion.enabledForHydraEngines = "0,1,2,3"
+ngx.enabled = false
+rtx.post.aa.op = 1
+rtx-defaults.post.aa.op = 1
+
+[settings.app.exts]
+folders.'++' = ["${app}/../extensions"]
+
+[dependencies]
+"omni.kit.uiapp" = {}
+"omni.kit.loop-isaac" = {}
+"isaacsim.core.rendering_manager" = {}
+"isaacsim.sensors.experimental.rtx" = {}
+"com.curvsurf.findsurface_isaac_sim" = {}

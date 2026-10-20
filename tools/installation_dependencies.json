@@ -1,0 +1,8 @@
+{
+  "isaac_url": "https://downloads.isaacsim.nvidia.com/isaac-sim-standalone-6.0.1-windows-x86_64.zip",
+  "isaac_sha256": "635e0ae3037efebf9605175cf1bb0ccb06498824cee5387480c042d8d25bbbd9",
+  "linux-x86_64": {
+    "isaac_url": "https://downloads.isaacsim.nvidia.com/isaac-sim-standalone-6.0.1-linux-x86_64.zip",
+    "isaac_md5": "65e2c2e83e2461ce0f33b0732d0ee4a3"
+  }
+}

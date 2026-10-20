@@ -1,0 +1,434 @@
+{
+  "runtime": "Isaac Sim 6.0.1",
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "driver": "595.97",
+  "acquisition": "Remeasured with D455 rigid bodies disabled before the first simulation update; every D455 scan optical pose verified against the requested scanner pose within 1e-6 m and quaternion component distance 1e-6.",
+  "repeats_per_profile_error_condition": 6,
+  "conditions": [
+    {
+      "name": "A",
+      "rig_pose": {
+        "position_m": [
+          0.0,
+          0.0,
+          8.0
+        ],
+        "orientation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "measurement_poses": {
+        "d455-16x9-50k": {
+          "position_m": [
+            0.0,
+            0.0,
+            8.0
+          ],
+          "orientation_xyzw": [
+            0.0,
+            2.7183456743017934e-16,
+            3.330669073875469e-16,
+            1.0
+          ]
+        },
+        "os0-rev6-128ch-10hz-512": {
+          "position_m": [
+            -8.042455590384634e-18,
+            0.03622000000000001,
+            8.0
+          ],
+          "orientation_xyzw": [
+            -0.5000000000000001,
+            0.5000000000000001,
+            0.5000000000000001,
+            0.4999999999999999
+          ]
+        },
+        "os0-rev7-128ch-10hz-512": {
+          "position_m": [
+            -8.042455590384634e-18,
+            0.03622000000000001,
+            8.0
+          ],
+          "orientation_xyzw": [
+            -0.5000000000000001,
+            0.5000000000000001,
+            0.5000000000000001,
+            0.4999999999999999
+          ]
+        }
+      },
+      "depth_optical_mount_checks": [
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        }
+      ],
+      "cloud_count_ranges": {
+        "d455-16x9-50k": [
+          11296,
+          11530
+        ],
+        "os0-rev6-128ch-10hz-512": [
+          4516,
+          4524
+        ],
+        "os0-rev7-128ch-10hz-512": [
+          4518,
+          4530
+        ]
+      }
+    },
+    {
+      "name": "B",
+      "rig_pose": {
+        "position_m": [
+          0.5,
+          0.25,
+          8.5
+        ],
+        "orientation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "measurement_poses": {
+        "d455-16x9-50k": {
+          "position_m": [
+            0.5,
+            0.25,
+            8.5
+          ],
+          "orientation_xyzw": [
+            0.0,
+            2.7183456743017934e-16,
+            3.330669073875469e-16,
+            1.0
+          ]
+        },
+        "os0-rev6-128ch-10hz-512": {
+          "position_m": [
+            0.5,
+            0.28622000000000003,
+            8.5
+          ],
+          "orientation_xyzw": [
+            -0.5000000000000001,
+            0.5000000000000001,
+            0.5000000000000001,
+            0.4999999999999999
+          ]
+        },
+        "os0-rev7-128ch-10hz-512": {
+          "position_m": [
+            0.5,
+            0.28622000000000003,
+            8.5
+          ],
+          "orientation_xyzw": [
+            -0.5000000000000001,
+            0.5000000000000001,
+            0.5000000000000001,
+            0.4999999999999999
+          ]
+        }
+      },
+      "depth_optical_mount_checks": [
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        },
+        {
+          "position_error_m": 0.0,
+          "quaternion_error": 4.299158020434437e-16
+        }
+      ],
+      "cloud_count_ranges": {
+        "d455-16x9-50k": [
+          9652,
+          9851
+        ],
+        "os0-rev6-128ch-10hz-512": [
+          4004,
+          4011
+        ],
+        "os0-rev7-128ch-10hz-512": [
+          4002,
+          4011
+        ]
+      }
+    }
+  ],
+  "objects": [
+    {
+      "enabled": true,
+      "subdivision": 14,
+      "display_subdivision": 4,
+      "face_color_rgba": [
+        0.36,
+        0.72,
+        0.94,
+        0.25
+      ],
+      "wire_color_rgba": [
+        0.1,
+        0.43,
+        0.62,
+        1.0
+      ],
+      "position_m": [
+        -3.7899999152868986,
+        1.4899999666959047,
+        0.7
+      ],
+      "orientation_xyzw": [
+        -0.23167173145756478,
+        -0.1838132326213639,
+        0.041640930695354204,
+        0.9543620577367707
+      ],
+      "width_m": 2.7599999383091927,
+      "height_m": 2.8799999356269836
+    },
+    {
+      "enabled": true,
+      "subdivision": 96,
+      "display_subdivision": 32,
+      "face_color_rgba": [
+        0.36,
+        0.72,
+        0.94,
+        0.25
+      ],
+      "wire_color_rgba": [
+        0.1,
+        0.43,
+        0.62,
+        1.0
+      ],
+      "position_m": [
+        -3.2399999275803566,
+        -1.839999958872795,
+        0.55
+      ],
+      "orientation_xyzw": [
+        -0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865475
+      ],
+      "radius_m": 1.6
+    },
+    {
+      "enabled": true,
+      "subdivision": 96,
+      "display_subdivision": 32,
+      "face_color_rgba": [
+        0.36,
+        0.72,
+        0.94,
+        0.25
+      ],
+      "wire_color_rgba": [
+        0.1,
+        0.43,
+        0.62,
+        1.0
+      ],
+      "position_m": [
+        -0.14999999664723873,
+        2.009999955072999,
+        0.029999999329447746
+      ],
+      "orientation_xyzw": [
+        -0.6488339541859462,
+        0.2810951794240332,
+        -0.28109517942403317,
+        0.6488339541859462
+      ],
+      "radius_m": 1.6,
+      "length_m": 2.8099999371916056
+    },
+    {
+      "enabled": true,
+      "subdivision": 96,
+      "display_subdivision": 32,
+      "face_color_rgba": [
+        0.36,
+        0.72,
+        0.94,
+        0.25
+      ],
+      "wire_color_rgba": [
+        0.1,
+        0.43,
+        0.62,
+        1.0
+      ],
+      "position_m": [
+        0.17999999597668648,
+        -1.6099999640136957,
+        0.6
+      ],
+      "orientation_xyzw": [
+        -0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865475
+      ],
+      "top_radius_m": 0.6999999843537807,
+      "bottom_radius_m": 1.889999957755208,
+      "length_m": 2.5999999418854713
+    },
+    {
+      "enabled": true,
+      "subdivision": 96,
+      "display_subdivision": 32,
+      "face_color_rgba": [
+        0.36,
+        0.72,
+        0.94,
+        0.25
+      ],
+      "wire_color_rgba": [
+        0.1,
+        0.43,
+        0.62,
+        1.0
+      ],
+      "position_m": [
+        3.3599999248981476,
+        -0.6899999845772982,
+        0.65
+      ],
+      "orientation_xyzw": [
+        0.005829417846086325,
+        -0.1606955348680704,
+        -0.000926336801008442,
+        0.986986375215571
+      ],
+      "major_radius_m": 1.1899999734014273,
+      "minor_radius_m": 0.7999999821186066,
+      "sweep_start_deg": 0.0,
+      "sweep_angle_deg": 360.0
+    }
+  ],
+  "detection_options": {
+    "geometry_mode": "Auto",
+    "seed_radius_m": 1.025,
+    "measurement_accuracy_m": 0.0505,
+    "mean_distance_m": 0.1,
+    "radial_expansion": 5,
+    "lateral_extension": 5,
+    "smart_convert_cone_to_cylinder": true,
+    "smart_convert_torus_to_sphere": true,
+    "smart_convert_torus_to_cylinder": true,
+    "revision": 0
+  },
+  "depth_diagnostics": {
+    "disparity_noise_enabled": true,
+    "outlier_removal_enabled": true,
+    "axial_error_enabled": true,
+    "axial_error_sigma_m": 0.03,
+    "disparity_noise_mean_px": 0.25,
+    "disparity_noise_sigma_px": 0.25,
+    "axial_error_model": "distance",
+    "axial_error_slope_m_per_m": 0.005,
+    "axial_error_intercept_m": 0.01
+  },
+  "target_material": {
+    "base": "concrete",
+    "coating": "paint",
+    "attribute": "emissive"
+  },
+  "method": "Full cloud passed unchanged to product SDK adapter; explicit requested type; one projected object-center seed per attempt; no retry, subsampling, SDK dispatch patch or parameter search. Each repeat uses a separate completed scan. Left/right split uses original center and scanner-camera right axis. Means/std/RMS use all returned inliers unless named histogram."
+}
