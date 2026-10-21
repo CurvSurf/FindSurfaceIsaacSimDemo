@@ -13,6 +13,12 @@ reference and examine their agreement. FindSurface supplies the geometric
 interpretation that makes those differences measurable: a scan becomes a
 surface with a type, position, orientation and dimensions.
 
+See what it looks like in action in the video below.
+
+[![video](https://img.youtube.com/vi/bgYpIVXgH0U/maxresdefault.jpg)](https://www.youtube.com/watch?v=bgYpIVXgH0U)
+
+Click the thumbnail above or [here](https://www.youtube.com/watch?v=bgYpIVXgH0U) to watch the video on YouTube.
+
 ## What the experiment reveals
 
 We scanned the same scene repeatedly with DepthSensor and LiDAR at two scanner
