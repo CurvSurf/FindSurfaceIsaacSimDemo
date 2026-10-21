@@ -2,6 +2,10 @@
 
 **Curv*Surf* FindSurface™** demo application for NVIDIA Isaac Sim 6.0.1.
 
+[FindSurface](https://github.com/CurvSurf/FindSurface) / [FindSurface Omniverse Extension](https://github.com/CurvSurf/FindSurfaceOmniverseExtension)
+
+## Overview
+
 Isaac Sim can generate point clouds from a virtual scene. How much of the
 scene's geometry can we recover from those scans—and what changes when we
 switch the simulated sensor?
