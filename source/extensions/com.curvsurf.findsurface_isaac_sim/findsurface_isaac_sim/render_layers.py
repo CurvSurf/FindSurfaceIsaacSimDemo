@@ -27,7 +27,6 @@ IDENTITY_MATRIX = (
 
 class RenderTheme(str, Enum):
     EDITOR_DARK = "editor-dark"
-    IVORY_LIGHT = "ivory-light"
 
 
 class RenderLayer(str, Enum):
@@ -131,21 +130,6 @@ class RenderStyle:
 
 def style_for_theme(theme: RenderTheme | str) -> RenderStyle:
     theme = RenderTheme(theme)
-    if theme is RenderTheme.IVORY_LIGHT:
-        return RenderStyle(
-            theme,
-            (0.965, 0.945, 0.875, 1.0),
-            (0.22, 0.52, 0.72, 0.24), (0.055, 0.19, 0.28, 1.0),
-            (0.18, 0.76, 0.58, 0.28), (0.02, 0.29, 0.19, 1.0),
-            (0.38, 0.82, 0.68, 0.24), (0.02, 0.36, 0.22, 1.0),
-            (1.0, 0.58, 0.08, 0.24), (0.44, 0.20, 0.01, 1.0),
-            (0.04, 0.16, 0.28, 1.0), (0.12, 0.25, 0.37, 1.0),
-            (0.055, 0.065, 0.075, 1.0),
-            (0.0, 0.22, 1.0, 1.0), (1.0, 0.78, 0.0, 1.0), (1.0, 0.02, 0.0, 1.0),
-            (1.0, 0.03, 0.03, 1.0), (0.58, 0.10, 0.82, 1.0), (0.52, 0.18, 0.0, 1.0),
-            (0.96, 0.43, 0.05, 0.10), (0.52, 0.18, 0.0, 1.0),
-            seed_radius_color=(0.055, 0.065, 0.075, 0.9),
-        )
     return RenderStyle(
         theme,
         (0.035, 0.05, 0.075, 1.0),

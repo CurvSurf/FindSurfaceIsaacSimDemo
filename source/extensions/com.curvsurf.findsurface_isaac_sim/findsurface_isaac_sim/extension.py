@@ -1591,7 +1591,6 @@ class FindSurfaceIsaacSimExtension(omni.ext.IExt):
                 frame = await coordinator.scan_once()
                 if frame is None and not coordinator.snapshot.no_returns:
                     raise RuntimeError(coordinator.snapshot.error or "Default settings scan failed")
-            self._chrome.set_theme(state.theme)
             self._anti_aliasing_mode, self._pip_visible, self._pip_width = display
             settings = carb.settings.get_settings()
             settings.set_int("/rtx/post/aa/op", int(self._anti_aliasing_mode))
@@ -2290,9 +2289,6 @@ class FindSurfaceIsaacSimExtension(omni.ext.IExt):
     def _handle_settings_and_graphics_property(self, action: str, value):
         if action == "settings.restore_defaults":
             return self._schedule_settings_defaults()
-        elif action == "settings.theme":
-            self._facade.set_theme(str(value))
-            self._chrome.set_theme(str(value))
         elif action == "settings.inlier_size":
             self._facade.set_interaction(inlier_rendering_size=float(value))
         elif action == "settings.point_size":
@@ -2719,9 +2715,7 @@ class FindSurfaceIsaacSimExtension(omni.ext.IExt):
         if merged_inliers is not None:
             point_layers += (merged_inliers,)
         self._render_revision += 1
-        style = style_for_theme(
-            RenderTheme.IVORY_LIGHT if state.theme == "classic-light" else RenderTheme.EDITOR_DARK
-        )
+        style = style_for_theme(RenderTheme.EDITOR_DARK)
         point_size = state.interaction.point_rendering_size
         style = replace(
             style,

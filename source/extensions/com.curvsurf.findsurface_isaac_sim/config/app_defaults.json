@@ -30,6 +30,5 @@
     "auto_preview": true
   },
   "visibility": {"source":true,"detected":true,"captured":true,"points":true},
-  "theme": "classic-dark",
   "findsurface_ui": {"ranges":[[0.001,0.1],[0.01,0.2],[0.05,2.0]]}
 }

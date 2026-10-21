@@ -237,7 +237,6 @@ class ClassicUiChrome:
         self._dock_error = None
         self._dock_attempts = 0
         self._render_window = None
-        self._theme = "classic-dark"
         self._result_overlay_state = None
         self._last_snapshot = initial
         self._viewport_overlays_mounted = False
@@ -577,14 +576,13 @@ class ClassicUiChrome:
                 self._build_result_overlay_histogram(state)
 
     def _build_result_overlay_body(self, state, height: int) -> None:
-        light = self._theme == "classic-light"
         panel = {
-            "background_color": 0xE8F2F2F2 if light else 0x991B1E24,
-            "border_color": 0x88404040 if light else 0x88FFFFFF,
+            "background_color": 0x991B1E24,
+            "border_color": 0x88FFFFFF,
             "border_width": 1,
             "border_radius": 5,
         }
-        title_style = {"color": 0xFF202328 if light else 0xF8FFFFFF, "font_size": 16}
+        title_style = {"color": 0xF8FFFFFF, "font_size": 16}
         with ui.ZStack(width=RESULT_OVERLAY_WIDTH, height=ui.Percent(100)):
             ui.Rectangle(style=panel)
             with ui.VStack(width=RESULT_OVERLAY_WIDTH, height=ui.Percent(100), spacing=0):
@@ -613,9 +611,8 @@ class ClassicUiChrome:
                 ui.Spacer()
 
     def _build_result_overlay_rows(self, state) -> None:
-        light = self._theme == "classic-light"
-        label_style = {"color": 0xFF30343A if light else 0xE8FFFFFF, "font_size": 13}
-        dim_style = {"color": 0xFF646A72 if light else 0xB8FFFFFF, "font_size": 12}
+        label_style = {"color": 0xE8FFFFFF, "font_size": 13}
+        dim_style = {"color": 0xB8FFFFFF, "font_size": 12}
         self._result_overlay_value_labels = []
         row_slots = RESULT_OVERLAY_ANALYSIS_ROW_COUNT if state.histogram_reserved else RESULT_OVERLAY_LIVE_ROW_COUNT
         with ui.VStack(height=row_slots * RESULT_OVERLAY_ROW_HEIGHT, spacing=0):
@@ -633,12 +630,12 @@ class ClassicUiChrome:
         if state.histogram is not None:
             with ui.VStack(spacing=0):
                 ui.Spacer(height=5)
-                self._build_result_histogram(state.histogram, light=self._theme == "classic-light")
+                self._build_result_histogram(state.histogram)
 
-    def _build_result_histogram(self, histogram, *, light: bool, hover_key=None) -> None:
+    def _build_result_histogram(self, histogram, *, hover_key=None) -> None:
         with ui.HStack(height=RESULT_OVERLAY_HISTOGRAM_HEIGHT, spacing=6):
             with ui.VStack(width=ui.Fraction(1), spacing=0):
-                self._build_histogram_chart(histogram, light=light, hover_key=hover_key)
+                self._build_histogram_chart(histogram, hover_key=hover_key)
             with ui.VStack(width=158, spacing=0):
                 for label, value in (
                     ("Samples", f"{histogram.used_count:,}/{histogram.source_count:,}"),
@@ -649,7 +646,7 @@ class ClassicUiChrome:
                         ui.Label(label, width=54)
                         ui.Label(value, width=ui.Fraction(1))
 
-    def _build_histogram_chart(self, histogram, *, light: bool, hover_key=None) -> None:
+    def _build_histogram_chart(self, histogram, *, hover_key=None) -> None:
         bars = tuple(histogram.bars)
         if not bars:
             return
@@ -678,13 +675,13 @@ class ClassicUiChrome:
         spacing = 0
         bar_width = ui.Fraction(1)
         axis_y = RESULT_OVERLAY_HISTOGRAM_BAR_HEIGHT + 5
-        axis_color = 0x99404040 if light else 0x99FFFFFF
+        axis_color = 0x99FFFFFF
         with ui.HStack(height=chart_height, spacing=0):
             ui.Spacer(width=12)
             with ui.ZStack(width=ui.Fraction(1), height=chart_height):
                 ui.Rectangle(style={
-                    "background_color": 0x22FFFFFF if light else 0x331B1E24,
-                    "border_color": 0x66404040 if light else 0x66FFFFFF,
+                    "background_color": 0x331B1E24,
+                    "border_color": 0x66FFFFFF,
                     "border_width": 1,
                     "border_radius": 3,
                 })
@@ -712,7 +709,6 @@ class ClassicUiChrome:
                                     style={
                                         "background_color": _heatmap_ui_color(
                                             bar.heat_coordinate,
-                                            light=light,
                                         )
                                     },
                                 )
@@ -1549,7 +1545,6 @@ class ClassicUiChrome:
                     )
                     self._build_result_histogram(
                         histogram,
-                        light=self._theme == "classic-light",
                         hover_key=(str(capture_id), str(basis)),
                     )
 
@@ -2802,10 +2797,6 @@ class ClassicUiChrome:
                 with ui.HStack(height=26, spacing=6):
                     ui.CheckBox(model=self.property_models[f"settings.{name}"], width=22)
                     ui.Label(label)
-        with BorderedGroupView("Appearance", row_heights=(32,)):
-            with ui.HStack(height=32, spacing=6):
-                ui.Button("Dark", clicked_fn=lambda: self._property_dispatch("settings.theme", "classic-dark"))
-                ui.Button("Light", clicked_fn=lambda: self._property_dispatch("settings.theme", "classic-light"))
         with BorderedGroupView("Geometry Editing", row_heights=(26,)):
             with ui.HStack(height=26, spacing=6):
                 ui.Label("Minimum length (m)", width=150)
@@ -3228,38 +3219,6 @@ class ClassicUiChrome:
         if self._viewport_overlays_mounted:
             self.sync_modal(snapshot)
 
-    @property
-    def theme(self) -> str:
-        return self._theme
-
-    def set_theme(self, theme: str) -> None:
-        theme = str(theme)
-        if theme not in ("classic-dark", "classic-light"):
-            raise ValueError("theme must be classic-dark or classic-light")
-        self._theme = theme
-        light = theme == "classic-light"
-        overlay_style = {
-            "background_color": 0xDDF2F2F2 if light else 0xCC10151C,
-            "color": 0xFF202328 if light else 0xFFE8EBEF,
-            "margin": 7,
-        }
-        for label in (self.sensor_overlay, self.rtx_overlay, self.analysis_overlay):
-            if label is not None:
-                label.style = overlay_style
-        result_state = self._result_overlay_state
-        self._result_overlay_state = None
-        if result_state is not None:
-            self.result_overlay_frame.clear()
-            self._result_overlay_header_icon = None
-            self._refresh_result_overlay(result_state)
-        self._queue_geometry_property_refresh()
-        self._toolbar_stack.style = _toolbar_style(light=light)
-        self.status_label.style = {
-            "background_color": 0xFFF0F0F0 if light else 0xFF171A20,
-            "color": 0xFF202328 if light else 0xFFE8EBEF,
-            "margin": 0,
-        }
-
     def sync_modal(self, snapshot: ShellSnapshot) -> None:
         if self._modal_overlay is None:
             return
@@ -3527,10 +3486,10 @@ def _tool_flags() -> int:
     return flags
 
 
-def _toolbar_style(*, light: bool = False) -> dict:
-    icon = 0xFF202328 if light else 0xFFFFFFFF
-    disabled = 0xFF999DA4 if light else 0xFF686D76
-    render_style = style_for_theme(RenderTheme.IVORY_LIGHT if light else RenderTheme.EDITOR_DARK)
+def _toolbar_style() -> dict:
+    icon = 0xFFFFFFFF
+    disabled = 0xFF686D76
+    render_style = style_for_theme(RenderTheme.EDITOR_DARK)
     def packed_color(rgba):
         r, g, b, a = (round(value * 255) for value in rgba)
         return (a << 24) | (b << 16) | (g << 8) | r
@@ -3590,11 +3549,10 @@ def _fraction_offset(fraction: float, width: int) -> int:
     return max(0, min(width - 1, int(fraction * (width - 1) + 0.5)))
 
 
-def _heatmap_ui_color(coordinate: float, *, light: bool = False) -> int:
+def _heatmap_ui_color(coordinate: float) -> int:
     """Match the renderer's negative-blue/zero-yellow/positive-red heatmap."""
 
-    theme = RenderTheme.IVORY_LIGHT if light else RenderTheme.EDITOR_DARK
-    rgba = heatmap_color(style_for_theme(theme), coordinate)
+    rgba = heatmap_color(style_for_theme(RenderTheme.EDITOR_DARK), coordinate)
     channels = [max(0, min(255, int(round(value * 255.0)))) for value in rgba]
     return (channels[3] << 24) | (channels[2] << 16) | (channels[1] << 8) | channels[0]
 

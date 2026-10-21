@@ -264,6 +264,7 @@ def load_user_preferences(
         # Retired ruler-only units must not invalidate the remaining saved settings.
         if isinstance(payload.get("display"), dict):
             payload["display"].pop("ruler_unit", None)
+        payload.pop("theme", None)
         overrides = _validated_overrides(payload)
         sensor_override = overrides.get("sensor", {})
         migrate_distance_error_sensor(sensor_override, base["sensor"]["axial_error_slope_m_per_m"])

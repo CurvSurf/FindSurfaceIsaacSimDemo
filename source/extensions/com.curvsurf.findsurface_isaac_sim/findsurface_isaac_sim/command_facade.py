@@ -302,7 +302,6 @@ class SessionSnapshot:
     visibility: VisibilityState
     primary_view: PrimaryView
     sensor: SensorSetting
-    theme: str
     point_depth_offset_m: float
     interaction: InteractionSettings
     captures: tuple[CapturePresentation, ...] = ()
@@ -516,16 +515,6 @@ class CommandFacade:
         self._record(_HistoryEntry("Change FindSurface parameters", before, replace(before, detection=options)))
         return self._snapshot
 
-    def set_theme(self, theme: str) -> SessionSnapshot:
-        self._require_ready()
-        theme = str(theme)
-        if theme not in ("classic-dark", "classic-light"):
-            raise ValueError("theme must be classic-dark or classic-light")
-        before = self._snapshot
-        if theme == before.theme:
-            return before
-        self._record(_HistoryEntry(f"Set theme {theme}", before, replace(before, theme=theme)))
-        return self._snapshot
 
     def set_point_depth_offset(self, offset_m: float) -> SessionSnapshot:
         self._require_ready()
@@ -869,7 +858,6 @@ class CommandFacade:
                 enabled=before.sensor.enabled,
                 follows_camera=before.sensor.follows_camera,
             ),
-            theme=defaults.theme,
             point_depth_offset_m=defaults.point_depth_offset_m,
             interaction=defaults.interaction,
         )
@@ -1128,7 +1116,6 @@ def session_from_config(config: Mapping[str, object]) -> SessionSnapshot:
                 str(material.get("attribute", "emissive")),
             ),
         ),
-        str(config["theme"]),
         float(config["renderer"].get("point_depth_offset_m", 0.006)),
         InteractionSettings(
             point_rendering_size=float(display.get("point_size", 2.5)),

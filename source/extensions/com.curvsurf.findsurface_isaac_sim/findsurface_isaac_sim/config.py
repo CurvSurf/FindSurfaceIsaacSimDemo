@@ -172,7 +172,6 @@ DEFAULT_APP_CONFIG: dict[str, Any] = {
         "auto_preview": True,
     },
     "visibility": {"source": True, "detected": True, "captured": True, "points": True},
-    "theme": "classic-dark",
     "findsurface_ui": {
         "ranges": [[0.001, 0.1], [0.01, 0.2], [0.05, 2.0]],
     },
@@ -217,6 +216,7 @@ def durable_config(config: Mapping[str, Any]) -> dict[str, Any]:
         for key, value in config.items()
         if key not in TRANSIENT_TOP_LEVEL_KEYS
     }
+    durable.pop("theme", None)
     if isinstance(durable.get("renderer"), dict):
         durable["renderer"]["scene_view"] = "OpenGL"
     return durable
@@ -256,6 +256,7 @@ def load_app_config(path: os.PathLike[str] | str | None = None) -> AppConfigLoad
         except (TypeError, ValueError, OverflowError) as error:
             return _fallback(destination, "config-axial-error-invalid", error)
     merged = deep_merge(DEFAULT_APP_CONFIG, loaded)
+    merged.pop("theme", None)
     merged["schema_version"] = SCHEMA_VERSION
     if isinstance(merged.get("renderer"), dict):
         merged["renderer"]["scene_view"] = "OpenGL"

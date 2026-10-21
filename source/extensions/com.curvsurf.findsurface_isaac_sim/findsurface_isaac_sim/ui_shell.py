@@ -361,7 +361,6 @@ class ClassicShellModel:
                 ("Point clouds", "Sizes and colors"),
             )),
             PropertySection(PropertyTab.SETTINGS, (
-                ("Theme", state.theme),
                 ("Picking probe", f"{state.interaction.probe_radius_px:.1f} px"),
                 ("Probe miss", "Nearest" if state.interaction.pick_nearest_on_probe_miss else "No pick"),
                 ("Sticky preview", (

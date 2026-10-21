@@ -396,7 +396,7 @@ additional error model shared by both sensor families.
 | **Outlier Removal** | Enables or disables the DepthSensor's outlier-removal processing for subsequent scans. |
 | **Frozen cloud > Export .xyz** | Writes the currently frozen cloud as text lines of `x y z` in metres. Disabled until a suitable frozen cloud exists; the row below reports the outcome. |
 
-<img src="docs/images/manual/settings-interaction.png" width="488" alt="FindSurface Timing, picking, sticky preview, heatmap scale, conversion, theme, and PIP settings">
+<img src="docs/images/manual/settings-interaction.png" width="488" alt="FindSurface Timing, picking, sticky preview, heatmap scale, conversion, and PIP settings">
 
 | UI element | Meaning |
 |---|---|
@@ -407,7 +407,6 @@ additional error model shared by both sensor families.
 | **Surface Side Heatmap > Scale** | Selects Auto (full range), Fixed distance, or Sigma multiple for mapping signed surface-side distance to colors. The default for both DepthSensor and LiDAR is Sigma with multiplier 3. |
 | **Surface Side Heatmap > Fixed range / Sigma range** | Sets the `±` distance in metres or the `±` standard-deviation multiplier for the selected scale mode. Neither changes the measured residuals. |
 | **Smart Conversion (Temporary) > Cone → Cylinder / Torus → Sphere / Torus → Cylinder** | Separately enables the three conditional FindSurface result conversions for diagnostic comparison. A checked option does not force every result to convert. |
-| **Appearance > Dark / Light** | Switches the application UI theme. |
 | **Geometry Editing > Minimum length (m)** | Lower bound applied when a metre-valued Objects dimension is next edited; raising it does not immediately rewrite existing dimensions. |
 | **PIP > Width / PIP on/off** | Sets the picture-in-picture width fraction or hides/shows the secondary view. It does not switch which view is primary; use `P` for that. |
 
