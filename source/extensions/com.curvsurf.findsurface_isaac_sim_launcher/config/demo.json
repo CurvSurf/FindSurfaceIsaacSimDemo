@@ -1,0 +1,8 @@
+{
+  "launcher_id": "com.curvsurf.findsurface_isaac_sim_launcher",
+  "title": "FindSurface Isaac Sim Demo",
+  "main_extension": "com.curvsurf.findsurface_isaac_sim",
+  "experience": "com.curvsurf.findsurface_isaac_sim_demo.kit",
+  "runtime_kind": "isaac",
+  "runtime_version": "6.0.1"
+}

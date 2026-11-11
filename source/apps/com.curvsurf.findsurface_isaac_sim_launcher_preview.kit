@@ -1,0 +1,16 @@
+[package]
+title = "FindSurface Isaac Sim Demo Launcher"
+version = "0.1.0"
+description = "Local preview host for the demo launcher; does not start the demo."
+
+[settings]
+app.window.title = "FindSurface Isaac Sim Demo Launcher"
+app.window.width = 760
+app.window.height = 440
+
+[settings.app.exts]
+folders.'++' = ["${app}/../extensions"]
+
+[dependencies]
+"omni.kit.uiapp" = {}
+"com.curvsurf.findsurface_isaac_sim_launcher" = {}

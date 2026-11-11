@@ -1,0 +1,14 @@
+{
+  "repository": "CurvSurf/FindSurfaceIsaacSimDemo",
+  "release_tag": "v0.1.0",
+  "extension_id": "com.curvsurf.findsurface_isaac_sim_launcher",
+  "kind": "launcher",
+  "kit_version": "110.1.2",
+  "picker": {
+    "windows-x86_64": "FindSurfaceIsaacSimPicking.dll",
+    "linux-x86_64": "libFindSurfaceIsaacSimPicking.so"
+  },
+  "supported_platforms": [
+    "windows-x86_64"
+  ]
+}

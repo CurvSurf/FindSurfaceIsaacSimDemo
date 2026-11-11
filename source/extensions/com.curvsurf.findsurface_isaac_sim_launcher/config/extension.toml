@@ -1,0 +1,25 @@
+[package]
+title = "FindSurface Isaac Sim Demo Launcher"
+version = "0.1.0"
+name = "com.curvsurf.findsurface_isaac_sim_launcher"
+authors = ["CurvSurf, Inc."]
+repository = "https://github.com/CurvSurf/FindSurfaceIsaacSimDemo"
+readme = "docs/Overview.md"
+changelog = "docs/CHANGELOG.md"
+icon = "data/icon.svg"
+preview_image = "data/preview.svg"
+description = "Launch the standalone FindSurface Isaac Sim Demo from a separate window."
+category = "Examples"
+keywords = ["findsurface", "demo", "launcher"]
+
+[package.target]
+kit = ["110.1.2"]
+platform = ["windows-x86_64"]
+
+[dependencies]
+"omni.ui" = {}
+"com.findsurface.bootstrap" = { version = "1.1.0", exact = true }
+
+# Do not depend on the demo implementation: it belongs in the child process.
+[[python.module]]
+name = "findsurface_isaac_sim_launcher"
