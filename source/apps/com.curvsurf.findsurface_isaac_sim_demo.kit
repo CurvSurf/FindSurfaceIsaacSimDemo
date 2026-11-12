@@ -5,6 +5,8 @@ description = "FindSurface validation application for Isaac Sim 6.0.1."
 keywords = ["app", "findsurface", "isaac-sim", "point-cloud"]
 
 [settings]
+# Suppress the renderer startup dialog; IOMMU warnings remain in the log.
+persistent.renderer.startupMessageDisplayed = true
 app.name = "FindSurfaceIsaacSimDemo"
 app.version = "0.1.0"
 app.window.title = "FindSurface Isaac Sim Demo"

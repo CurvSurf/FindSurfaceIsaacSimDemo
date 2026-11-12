@@ -9,12 +9,12 @@ changelog = "docs/CHANGELOG.md"
 icon = "data/icon.svg"
 preview_image = "data/preview.svg"
 description = "Launch the standalone FindSurface Isaac Sim Demo from a separate window."
-category = "Examples"
+category = "example"
 keywords = ["findsurface", "demo", "launcher"]
 
 [package.target]
 kit = ["110.1.2"]
-platform = ["windows-x86_64"]
+platform = ["windows-x86_64", "linux-x86_64"]
 
 [dependencies]
 "omni.ui" = {}

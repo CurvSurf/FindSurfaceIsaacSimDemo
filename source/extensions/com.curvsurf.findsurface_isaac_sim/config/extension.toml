@@ -2,8 +2,12 @@
 title = "FindSurface Isaac Sim"
 version = "0.1.0"
 description = "Recover and compare geometric surfaces from simulated depth point clouds."
-category = "Simulation"
+category = "example"
 keywords = ["findsurface", "isaac-sim", "diagnostics"]
+
+[package.target]
+kit = ["110.1.2"]
+platform = ["windows-x86_64", "linux-x86_64"]
 
 [dependencies]
 "omni.ui" = {}

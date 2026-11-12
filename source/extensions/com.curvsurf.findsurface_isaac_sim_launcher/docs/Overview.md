@@ -6,7 +6,7 @@ the host. Disabling the launcher does not stop an already running demo.
 
 ## Requirements and usage
 
-- Launcher host: Kit 110.1.2 / Python 3.12, Windows x86-64 (tested).
+- Launcher host: Kit 110.1.2 / Python 3.12, Windows and Linux x86-64 (tested).
 - Installed demo runtime: **isaac 6.0.1**. No runtime is included or installed.
 - Registry dependency: `com.findsurface.bootstrap` **1.1.0** exactly.
 
