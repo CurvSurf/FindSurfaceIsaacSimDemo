@@ -3,7 +3,7 @@ title = "FindSurface Isaac Sim"
 version = "0.1.0"
 description = "Recover and compare geometric surfaces from simulated depth point clouds."
 category = "example"
-keywords = ["findsurface", "isaac-sim", "diagnostics"]
+keywords = ["findsurface", "curvsurf", "geometry", "detection", "pointcloud", "cad", "3d-data-processing", "demo", "isaacsim"]
 
 [package.target]
 kit = ["110.1.2"]

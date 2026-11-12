@@ -53,6 +53,24 @@ async def check():
             result["package_id"] = verify_and_get_package_id_for_publishing(metadata)
             assert verify_extension_for_publishing(metadata)[0], "Kit metadata verification failed"
             result["published"] = False
+            if config["case"] == "core":
+                from findsurface.bootstrap import FindSurfaceDetector
+                from findsurface.bootstrap.findsurface_sdk import wrapper
+                sdk_path = wrapper.default_library_path()
+                result["sdk_absent_before_first_use"] = not sdk_path.exists()
+                detector = FindSurfaceDetector()
+                detector.close()
+                result["sdk_present_after_first_use"] = sdk_path.is_file()
+                original = wrapper.urllib.request.urlopen
+                def reject_network(*args, **kwargs):
+                    raise AssertionError("Existing SDK should not be downloaded again")
+                try:
+                    wrapper.urllib.request.urlopen = reject_network
+                    detector = FindSurfaceDetector()
+                    detector.close()
+                    result["existing_sdk_reused_without_network"] = True
+                finally:
+                    wrapper.urllib.request.urlopen = original
         else:
             from findsurface.bootstrap import demo_launcher_ui
             from findsurface.bootstrap.demo_launcher import make_launch_plan

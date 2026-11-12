@@ -10,7 +10,7 @@ icon = "data/icon.svg"
 preview_image = "data/preview.svg"
 description = "Launch the standalone FindSurface Isaac Sim Demo from a separate window."
 category = "example"
-keywords = ["findsurface", "demo", "launcher"]
+keywords = ["findsurface", "curvsurf", "geometry", "detection", "pointcloud", "cad", "3d-data-processing", "demo", "isaacsim"]
 
 [package.target]
 kit = ["110.1.2"]
