@@ -24,3 +24,6 @@ data/Kit/
 extscache/
 extsUser/
 shadercache/
+
+# Local release operator notes
+/COMMUNITY_REGISTRY.md
