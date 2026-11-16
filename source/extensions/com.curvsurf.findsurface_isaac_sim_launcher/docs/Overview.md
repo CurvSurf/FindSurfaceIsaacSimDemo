@@ -8,7 +8,7 @@ the host. Disabling the launcher does not stop an already running demo.
 
 - Launcher host: Kit 110.1.2 / Python 3.12, Windows and Linux x86-64 (tested).
 - Installed demo runtime: **isaac 6.0.1**. No runtime is included or installed.
-- Registry dependency: `com.findsurface.bootstrap` **1.1.0** exactly.
+- Registry dependency: `curvsurf.findsurface.core` **1.1.1** exactly.
 
 The launcher checks the runtime version. If automatic discovery fails, enter
 the installed runtime folder and click **Run Demo**. The archive bundles the

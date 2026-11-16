@@ -15,7 +15,7 @@ REQUIRED_VERSION = (6, 0, 1)
 ROOT = Path(__file__).resolve().parents[1]
 EXPERIENCE = ROOT / "source" / "apps" / "com.curvsurf.findsurface_isaac_sim_demo.kit"
 EXTENSIONS = ROOT / "source" / "extensions"
-BOOTSTRAP_EXTENSION = EXTENSIONS / "com.findsurface.bootstrap"
+BOOTSTRAP_EXTENSION = EXTENSIONS / "curvsurf.findsurface.core"
 
 class RuntimeDiscoveryError(RuntimeError):
     """An actionable Isaac Sim runtime discovery or version error."""
@@ -36,7 +36,7 @@ def command_init_dependencies(_args: argparse.Namespace) -> int:
 def initialize_dependencies(project: Path) -> int:
     """Initialize the pinned extension while preserving pre-positioned SDK files."""
     project = project.resolve()
-    bootstrap = project / "source/extensions/com.findsurface.bootstrap"
+    bootstrap = project / "source/extensions/curvsurf.findsurface.core"
     backup = None
     if bootstrap.exists() and not (bootstrap / ".git").exists():
         if any(bootstrap.iterdir()):

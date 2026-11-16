@@ -90,14 +90,14 @@ def host_check(case, phase, root, installed, runtime, folder, smoke):
         write(folder / "child-config.json", child)
         config.update(launcher_root=str(installed / case / "exts" / launcher), child_config=str(folder / "child-config.json"),
                       child_result=child["result"], child_log=str(folder / "child.log"))
-    extension = "com.findsurface.bootstrap" if case == "core" else launcher
+    extension = "curvsurf.findsurface.core" if case == "core" else launcher
     config["extension"] = extension
     write(folder / f"{phase}-config.json", config)
     app = folder / f"{phase}.kit"
     # Load USD/core during normal startup, before app-ready. Enabling the core
     # only in --exec caused spurious late omni.usd app-ready errors on Linux.
     dependencies = ('"omni.kit.uiapp" = {}\n"omni.kit.registry.nucleus" = {}\n'
-                    '"com.findsurface.bootstrap" = { version = "1.1.0", exact = true }\n')
+                    '"curvsurf.findsurface.core" = { version = "1.1.1", exact = true }\n')
     if phase == "host":
         dependencies += f'"{launcher}" = {{}}\n'
     app.write_text('[dependencies]\n' + dependencies + '[settings]\napp.extensions.registryEnabled=false\napp.window.width=760\napp.window.height=440\n', encoding="utf-8")
@@ -194,7 +194,7 @@ def main(argv=None):
         expected = policy["sha256"][args.platform]
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise RuntimeError(f"Supply pinned SDK {policy['release_tag']} in {path}")
-        for core in [work / "core", work / "demo/source/extensions/com.findsurface.bootstrap", work / "isaac/source/extensions/com.findsurface.bootstrap"]:
+        for core in [work / "core", work / "demo/source/extensions/curvsurf.findsurface.core", work / "isaac/source/extensions/curvsurf.findsurface.core"]:
             prepare_test_core(core, path, args.platform)
         return {"release": policy["release_tag"], "sha256": expected,
                 "disposable_source_target": args.platform}

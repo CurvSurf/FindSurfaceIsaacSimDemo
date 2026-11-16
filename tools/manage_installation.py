@@ -256,7 +256,7 @@ def start(args: argparse.Namespace, installation: Installation) -> int:
     config = read_json(project / "tools/installation_dependencies.json")["linux-x86_64"]
     record = read_json(installation.record_path) if installation.record_path.exists() else None
     private = installation.owned_root(record) if record else None
-    local_sdk = project / "source/extensions/com.findsurface.bootstrap/data/native/linux-x86_64" / SDK_NAME
+    local_sdk = project / "source/extensions/curvsurf.findsurface.core/data/native/linux-x86_64" / SDK_NAME
     sdk = Path(args.sdk_path).expanduser().resolve() if args.sdk_path else None
     if sdk and not sdk.is_file():
         raise ValueError(f"Explicit SDK does not exist: {sdk}")
@@ -268,7 +268,7 @@ def start(args: argparse.Namespace, installation: Installation) -> int:
         raise ValueError("Native picker needs CMake and a C++ compiler. Run: sudo apt install cmake build-essential")
     if not shutil.which("curl"):
         raise ValueError("curl is required for verified resumable downloads. Run: sudo apt install curl")
-    bootstrap = project / "source/extensions/com.findsurface.bootstrap/config/extension.toml"
+    bootstrap = project / "source/extensions/curvsurf.findsurface.core/config/extension.toml"
     if not bootstrap.is_file():
         if not (project / ".git").exists() or not shutil.which("git"):
             raise ValueError("Missing extension source. Use a recursive Git clone or an assembled release ZIP.")

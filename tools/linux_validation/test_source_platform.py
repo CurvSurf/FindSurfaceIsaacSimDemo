@@ -26,7 +26,7 @@ class SourcePlatformTests(unittest.TestCase):
             base = Path(directory)
             original = base / "original"
             (original / "config").mkdir(parents=True)
-            text = '[package]\nversion="1.1.0"\n[package.target]\nkit=["110.1.2"]\nplatform = ["windows-x86_64"]\n'
+            text = '[package]\nversion="1.1.1"\n[package.target]\nkit=["110.1.2"]\nplatform = ["windows-x86_64"]\n'
             (original / "config/extension.toml").write_text(text, encoding="utf-8")
             work = base / "work"
             shutil.copytree(original, work)
@@ -43,7 +43,7 @@ class SourcePlatformTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             core = Path(directory)
             (core / "config").mkdir()
-            (core / "config/extension.toml").write_text('[package]\nversion="1.1.0"\n')
+            (core / "config/extension.toml").write_text('[package]\nversion="1.1.1"\n')
             with self.assertRaisesRegex(ValueError, "exactly one"):
                 prepare_test_core(core, core / "missing.so", "linux-x86_64")
 

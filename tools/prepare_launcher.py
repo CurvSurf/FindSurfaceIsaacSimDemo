@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "source/extensions/com.findsurface.bootstrap"))
+sys.path.insert(0, str(ROOT / "source/extensions/curvsurf.findsurface.core"))
 from findsurface.bootstrap.demo_launcher import stage_launcher
 
 

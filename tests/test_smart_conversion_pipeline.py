@@ -7,7 +7,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT/'source/extensions/com.curvsurf.findsurface_isaac_sim'),
-    str(ROOT/'source/extensions/com.findsurface.bootstrap')]
+    str(ROOT/'source/extensions/curvsurf.findsurface.core')]
 from findsurface.bootstrap import FindSurfaceDetector
 from findsurface.bootstrap import native
 from findsurface.bootstrap.findsurface_sdk.abi import FsResult

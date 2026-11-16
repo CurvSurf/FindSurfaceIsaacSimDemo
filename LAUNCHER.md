@@ -1,6 +1,6 @@
 # Demo launcher structure
 
-The core `com.findsurface.bootstrap` remains a reusable SDK extension.
+The core `curvsurf.findsurface.core` remains a reusable SDK extension.
 `com.curvsurf.findsurface_isaac_sim_launcher` opens a small launcher window. It does **not** depend on or enable
 `com.curvsurf.findsurface_isaac_sim` in the host. **Run Demo** starts the existing experience in a
 separate process, after checking for isaac 6.0.1. Disabling the launcher

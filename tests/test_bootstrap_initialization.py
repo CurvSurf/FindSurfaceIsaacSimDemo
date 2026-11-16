@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT / 'tools'))
 import repo
 import manage_installation as installer
 
-RELATIVE = 'source/extensions/com.findsurface.bootstrap'
+RELATIVE = 'source/extensions/curvsurf.findsurface.core'
 
 
 @unittest.skipUnless(shutil.which('git'), 'Git is required for local clone regression tests')

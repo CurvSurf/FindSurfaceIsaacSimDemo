@@ -203,5 +203,5 @@ commercial agreement, including when downloaded by the launch scripts.
 The FindSurfaceOmniverseExtension submodule, NVIDIA Isaac Sim/Kit and other
 third-party components retain their own applicable terms.
 Preserve the bootstrap extension's
-[third-party notices](source/extensions/com.findsurface.bootstrap/THIRD_PARTY_NOTICES.md)
+[third-party notices](source/extensions/curvsurf.findsurface.core/THIRD_PARTY_NOTICES.md)
 and the application's [third-party notices](THIRD_PARTY_NOTICES.md).

@@ -200,7 +200,7 @@ class InstallationTests(unittest.TestCase):
                        '"args":sys.argv[1:],"picker":os.environ["FSIS_PICKING_LIBRARY_PATH"],\n'
                        '"download":os.environ["FINDSURFACE_SDK_AUTO_DOWNLOAD"]}))\n')
         kit.chmod(0o755)
-        bootstrap = self.project / "source/extensions/com.findsurface.bootstrap/config"
+        bootstrap = self.project / "source/extensions/curvsurf.findsurface.core/config"
         bootstrap.mkdir(parents=True)
         (bootstrap / "extension.toml").write_text("[package]\n")
         (self.project / "tools").mkdir()
@@ -266,7 +266,7 @@ class InstallationTests(unittest.TestCase):
         with patch.object(installer.update_sdk, "ensure_sdk") as update:
             self.assertEqual(installer.start(args, self.installation), 0)
             update.assert_not_called()
-        local = self.project / "source/extensions/com.findsurface.bootstrap/data/native/linux-x86_64" / installer.SDK_NAME
+        local = self.project / "source/extensions/curvsurf.findsurface.core/data/native/linux-x86_64" / installer.SDK_NAME
         local.parent.mkdir(parents=True)
         shutil.copyfile(fixture, local)
         # Simulate a checkout with no previous SDK selection.

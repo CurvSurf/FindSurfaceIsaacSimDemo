@@ -236,7 +236,7 @@ function Remove-Installation($Record, [switch]$Confirmed) {
 }
 
 function Start-Installation {
-    $bootstrap = Join-Path $ProjectRoot 'source\extensions\com.findsurface.bootstrap'
+    $bootstrap = Join-Path $ProjectRoot 'source\extensions\curvsurf.findsurface.core'
     $needsBootstrap = -not (Test-Path -LiteralPath (Join-Path $bootstrap 'config\extension.toml'))
     if ($needsBootstrap) {
         if (-not (Test-Path -LiteralPath (Join-Path $ProjectRoot '.git'))) {

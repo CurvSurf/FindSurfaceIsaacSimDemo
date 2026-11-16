@@ -13,11 +13,11 @@ or `libFindSurface.so` on Ubuntu x86_64. A fresh download is stored in the
 installation's private folder and passed to this app by its exact path.
 
 An existing Windows SDK at
-`source/extensions/com.findsurface.bootstrap/data/native/windows-x86_64/FindSurface.dll`
+`source/extensions/curvsurf.findsurface.core/data/native/windows-x86_64/FindSurface.dll`
 is reused and is not removed by `Remove_Demo.bat`.
 
 For offline Ubuntu x86_64 setup, place the **approved Linux build** at
-`source/extensions/com.findsurface.bootstrap/data/native/linux-x86_64/libFindSurface.so`,
+`source/extensions/curvsurf.findsurface.core/data/native/linux-x86_64/libFindSurface.so`,
 or pass `bash Start_Demo.sh --sdk-path /path/to/libFindSurface.so`.
 This explicit external library is reused, load-tested and preserved on removal.
 SDK binaries must not be committed to the source repository. The bundled C++
